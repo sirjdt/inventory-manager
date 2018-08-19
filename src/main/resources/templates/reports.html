@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta charset="utf-8" />
+    <title>Reports</title>
+</head>
+<body>
+<div th:replace="fragments :: page-header"></div>
+<div class="container-fluid">
+    <h2>Reports</h2>
+    <!-- Left-aligned media object -->
+    <div class="media">
+        <div class="media-left">
+            <img src="http://img.photobucket.com/albums/v714/vocalzero/pielist_zpsxrphhufu.jpg" class="media-object" style="width:300px;height: 300px;" />
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">Color Chart</h4>
+            <p>Displays color-coordinated inventory for pie chart readability.</p>
+        </div>
+    </div>
+
+    <!-- Right-aligned media object -->
+    <div class="media">
+        <div class="media-body">
+            <h4 class="media-heading">Inventory Chart</h4>
+            <p> Displays available inventory.</p>
+        </div>
+        <div class="media-right">
+            <img src="http://img.photobucket.com/albums/v714/vocalzero/pie_zpshlxrmd3o.jpg" class="media-object" style="width:300px;height: 300px;" />
+        </div>
+    </div>
+</div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
