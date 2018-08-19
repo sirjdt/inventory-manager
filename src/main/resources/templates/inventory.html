@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+
+<body class="container">
+
+<h1 th:text="${title}">Default Title</h1>
+
+<div th:replace="fragments :: page-header"></div>
+
+<p th:unless="${inventories} and ${inventories.size()}">no inventory:(</p>
+
+
+<table class="table">
+
+    <tr>
+        <th>Name</th>
+        <th>Part Number</th>
+        <th>Starting Inventory</th>
+        <th>Inventory Received</th>
+        <th>Inventory Shipped</th>
+        <th>Inventory On Hand</th>
+        <th>Minimum Required</th>
+    </tr>
+
+    <tr th:each="inventory : ${inventories}">
+        <td th:text="${inventory.name}"></td>
+        <td th:text="${inventory.partNumber}"></td>
+        <td th:text="${inventory.startingInventory}"></td>
+        <td th:text="${inventory.inventoryReceived}"></td>
+        <td th:text="${inventory.inventoryShipped}"></td>
+        <td th:text="${inventory.inventoryOnHand}"></td>
+        <td th:text="${inventory.minimumRequired}"></td>
+
+    </tr>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

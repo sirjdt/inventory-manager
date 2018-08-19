@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org/">
+
+<head th:fragment="head">
+
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" />
+    <link th:href="@{/css/inventory-manager.css}" rel="stylesheet" />
+    <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
+
+    <title th:text="'Warehouse Inc.' + ${title == null ? '' : ' :: ' + title}">Warehouse Inc.</title>
+</head>
+
+<body>
+
+<div th:fragment="page-header" class="navbar navbar-default navbar-fixed-left">
+    <div class="container-fluid">
+        <div class="row">
+            <a th:href="@{/}" class="navbar-brand">Warehouse Inc.</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a th:href="@{/inventory}">Current Inventory</a></li>
+                <li><a th:href="@{/schedule}">Shipping Schedule</a></li>
+                <li><a th:href="@{/reports}">Reports</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div th:fragment="carousel-header">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="user-scalable=yes,width=device-width, initial-scale=1"></meta>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" data-th-src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/main.css" data-th-href="@{/css/main.css}" />
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" data-th-src="@{/webjars/bootstrap-3.2.0/js/bootstrap.min.js}"></script>
+</div>
+
+</body>
+</html>
